@@ -1,0 +1,60 @@
+/* --- Base Theme Setup --- */
+body {
+  /* Rich, deep purple background gradient to make the glass effect pop */
+  background: linear-gradient(135deg, #090314 0%, #15092a 50%, #220e40 100%);
+  background-attachment: fixed;
+  color: #e5def2;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* --- Frosted Glass Container for ASCII Art --- */
+pre {
+  /* Enforces strict layout protection for ASCII */
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  white-space: pre;
+  word-wrap: normal;
+  word-break: normal;
+
+  /* The Frosted Glass Core Recipe */
+  background: rgba(255, 255, 255, 0.03); 
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); /* Safari support */
+  
+  /* Semi-transparent borders for a glass edge reflection */
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  border-left: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 16px;
+  
+  /* Soft, deep ambient shadow */
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  
+  /* Text and spacing adjustments */
+  color: #e0d4ff;
+  font-family: monospace;
+  line-height: 1.2;
+  padding: 24px;
+}
+
+/* --- Clean, Minimal Glass Scrollbar --- */
+pre::-webkit-scrollbar {
+  height: 6px;
+}
+
+pre::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 0 0 16px 16px;
+}
+
+pre::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 3px;
+}
+
+pre::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
